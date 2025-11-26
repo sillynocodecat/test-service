@@ -1,0 +1,11 @@
+[Unit]
+Description=test
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/*path*/test_stuk.sh
+
+[Install]
+WantedBy=multi-user.target
